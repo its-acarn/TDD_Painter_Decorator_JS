@@ -1,0 +1,14 @@
+{
+  "name": "tdd_painter_decorator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "decorator.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^8.1.3"
+  }
+}
