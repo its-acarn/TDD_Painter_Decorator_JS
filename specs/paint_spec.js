@@ -9,10 +9,10 @@ describe('Paint', function() {
     it('should have a litres value', function(){
         const actual = paint.litres;
         assert.strictEqual(actual, 10);
-    })
+    });
 
     it('is paint can empty', function(){
         actual = paint.empty;
         assert.strictEqual(actual, false);
-    })
+    });
 });
