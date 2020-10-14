@@ -24,7 +24,7 @@ describe('Decorator', function () {
 		decorator.addStock(paint_4);
 		decorator.addStock(paint_5);
 		decorator.addStock(paint_6);
-		room = new Room(12, false);
+		room = new Room(13, false);
 	});
 
 	it('should have no stock', function () {
@@ -33,10 +33,17 @@ describe('Decorator', function () {
 		assert.deepStrictEqual(actual, []);
 	});
 
-	// it('should add stock', function () {
-	// 	const actual = decorator.stock;
-	// 	assert.deepStrictEqual(actual, [paint_1, paint_2]);
-	// });
+	it('should add stock', function () {
+		const actual = decorator.stock;
+		assert.deepStrictEqual(actual, [
+			paint_1,
+			paint_2,
+			paint_3,
+			paint_4,
+			paint_5,
+			paint_6,
+		]);
+	});
 
 	it('should calculate total paint litres', function () {
 		const actual = decorator.calculatePaintLitres();
@@ -57,7 +64,7 @@ describe('Decorator', function () {
 	it('should decrease paint when painting a room', function () {
 		decorator.reducePaint(room, decorator.stock);
 		const actual = decorator.calculatePaintLitres();
-		assert.strictEqual(actual, 3);
+		assert.strictEqual(actual, 2);
 		console.log(paint_1);
 		console.log(paint_2);
 		console.log(paint_3);
